@@ -63,7 +63,7 @@ def tutor_answer(question, lesson):
     if not words or not ranked or ranked[0][0] == 0:
         return 'No encuentro información suficiente sobre eso en esta lección. Prueba preguntando por los métodos, rutas o códigos HTTP que aparecen en el material.'
     best = [s for score, s in ranked if score >= max(1, ranked[0][0] - 1)][:3]
-    return ' '.join(best) + '\n\n(Respuesta basada en el contenido de esta lección.)'
+    return ' '.join(best)
 
 @app.route('/')
 def index(): return redirect(url_for('login') if not current_user() else url_for('course'))
