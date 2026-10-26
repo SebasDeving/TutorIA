@@ -12,7 +12,7 @@ Aplicación demostrativa en Python para el ejercicio técnico. Incluye un curso 
 6. Abre <http://127.0.0.1:5000>.
 
 
-## Usuarios de demostraciónn
+## Usuarios de demostración
 
 - Ana: `ana` / `ana123` (tiene acceso).
 - Luis: `luis` / `luis123` (sin acceso; se muestra un 403).
