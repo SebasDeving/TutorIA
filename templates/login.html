@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tutor IA | Acceso</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="login card">
+    <div class="eyebrow">AULA DEMO · POC</div>
+    <h1>Tu tutor de APIs</h1>
+    <p>Aprende a tu ritmo con ayuda contextual por texto o voz.</p>
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+    <form method="post">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <label>Usuario de prueba
+        <input name="username" type="text" required autocomplete="username" placeholder="Escribe tu usuario">
+      </label>
+      <label>Contraseña
+        <input name="password" type="password" required autocomplete="current-password" placeholder="ana123 o luis123">
+      </label>
+      <button>Entrar al aula <span>→</span></button>
+    </form>
+    <small>Demo: Ana / ana123 · Luis / luis123</small>
+  </main>
+</body>
+</html>
